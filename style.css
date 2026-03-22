@@ -4,11 +4,11 @@
     height: 100px;
     position: fixed;
     left: 50%;
-    top: 45%;
+    top: 25%;
     transform: translateY(-50%);
     transform: translateX(-50%);
     background: center no-repeat #fff;
-    z-index: 9999999999999999999999;
+    z-index: 9999;
     font-size: 50px;
     outline: none;
     box-sizing: border-box;
@@ -27,7 +27,50 @@
     background-size: 100% 100%;
     background-position: center;
 }
+.loader1 {
+    position: absolute;  /* Changed from fixed */
+    left: 0px;
+    top: 0px;  /* Changed from 100px to 0px */
+    width: 100%;
+    height: auto;  /* Changed from 50% to auto */
+    z-index: 998;
+    padding: 20px 0;  /* Add some padding */
+}
 
+.loader1 button {
+    width: 20%;
+    height:90px;
+    position: relative;  /* Changed from fixed */
+    margin: 0 auto;  /* Center the button */
+    display: block;  /* Make it block level */
+    left: auto;  /* Remove left positioning */
+    top: auto;  /* Remove top positioning */
+    transform: none;  /* Remove transform */
+    background: center no-repeat #fff;
+    z-index: 9999;
+    font-size: 30px;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+    border-radius: .3em;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4),
+        inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+        inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+    background-image: linear-gradient(160deg, #924e17, #b47e11, #f8efb4, #bc881b, #a54e07);
+    border: 1px solid #a55d07;
+    color: rgb(7, 11, 79);
+    text-shadow: 0 2px 2px rgb(32, 19, 99);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.highlight {
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(255, 69, 0, 0.5);
+}
 .golden-btn:focus,
 .golden-btn:hover {
     background-size: 150% 150%;
@@ -53,7 +96,6 @@
     z-index: 999;
     background: url(back.png) center no-repeat #000;
 }
-
 .song {
     display: none;
 }
@@ -66,23 +108,15 @@ img {
     width: 100%;
 }
 
-.balloon-border {
-    position: fixed;
-    top: 100%;
-    opacity: 0.5;
-    z-index: 999999999999999999999999;
-    
-}
-
 .area {
     text-align: center;
-    font-size: 70px;
-    color: #C4515C;
-    letter-spacing: -7px;
+    font-size: 100px;
+    color: #0d254a;
+    letter-spacing: 4px;
     font-weight: 700;
     text-transform: uppercase;
     animation: spin 2s ease-out infinite;
-    text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+    text-shadow: 0px 0px 5px #bcbace, 0px 0px 7px #e7dada;
     font-size-adjust: 0.3;
 }
 
@@ -115,5 +149,186 @@ img {
 
 .type-wrap {
     font-size: 25px;
-    color: #C4515C;
+    color: #0a286b;
+}
+
+.image {
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    padding-top: 250px;
+    animation: shake 0.5s infinite;
+}
+
+.image1{
+    height: 400px;
+    width: 400px;
+    position:relative;
+    bottom: 400px;
+    left: 750px;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+/* Container for all dancing images */
+.dancing-images-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* All dancing images */
+.dancing-img {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 1000px;
+    right: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: shake 0.5s infinite;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.dancing-img1 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    right: 330px;
+    bottom: 600px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: shake 0.5s infinite;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.dancing-img2 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 400px;
+    right: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: shake 0.5s infinite;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.dancing-img3 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 500px;
+    right: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: shake 0.5s infinite;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.dancing-img4 {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    bottom: 400px;
+    left:250px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: shake 0.5s infinite;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.dancing-img5 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 150px;
+    bottom: 1000px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: shake 0.5s infinite;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.dancing-img6 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 650px;
+    left:400px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: shake 0.5s infinite;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.dancing-img7 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 600px;
+    right:50px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: shake 0.5s infinite;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.dancing-img8 {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    bottom: 900px;
+    left:450px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: shake 0.5s infinite;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+/* Different delays for variety */
+.dancing-img:nth-child(1) { animation-delay: 0s; }
+.dancing-img:nth-child(2) { animation-delay: 0.1s; }
+.dancing-img:nth-child(3) { animation-delay: 0.2s; }
+.dancing-img:nth-child(4) { animation-delay: 0.3s; }
+.dancing-img:nth-child(5) { animation-delay: 0.4s; }
+.dancing-img:nth-child(6) { animation-delay: 0.5s; }
+.dancing-img:nth-child(7) { animation-delay: 0.6s; }
+.dancing-img:nth-child(8) { animation-delay: 0.7s; }
+.dancing-img:nth-child(9) { animation-delay: 0.8s; }
+
+
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, -5px) rotate(5deg); }
+    50% { transform: translate(-5px, 5px) rotate(-5deg); }
+    75% { transform: translate(3px, -3px) rotate(3deg); }
+}
+.shake {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.fly{
+
+    animation: fly 5s linear infinite;
+}
+.glow-btn {
+    background: #D4AF37;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #dcc370;
+    transition: 0.3s;
+}
+
+.glow-btn:hover {
+    box-shadow: 0 0 20px #5695ba;
+    background: #1d138a;
 }

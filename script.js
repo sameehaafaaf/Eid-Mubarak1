@@ -20,6 +20,9 @@ $('#play').click(function () {
     audio.play();
 
 });
+$('#play2').click(function() {
+    window.open('pay.html', '_self');
+});
 var typed = new Typed("#typed", {
     stringsElement: '#typed-strings',
     typeSpeed: 30,
@@ -422,4 +425,5 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', function (event) {
         confetti.resize();
     });
+    
 });
